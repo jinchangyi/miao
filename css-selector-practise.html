@@ -4,13 +4,25 @@
     <meta charset="utf-8" />
     <title>Document</title>
     <style>
-      .a:hover {
+      body > p:first-child {
         color: red;
       }
-      .a:active {
+      body > p:nth-child(2):hover {
+        color: red;
+      }
+      body > p:nth-child(2):active {
+        color: blue;
+      }
+      body > p:nth-child(2):focus {
         color: green;
       }
-      .a:focus {
+      body > p:nth-child(3) {
+        color: red;
+      }
+      body > p:nth-child(3) span > span:first-child {
+        color: green;
+      }
+      body > p:nth-child(3) span:nth-child(2) {
         color: blue;
       }
     </style>
@@ -22,29 +34,29 @@
       a:link {
         color: pink;
       }
-      div a[href^="mailto"] {
+      a[href^="mailto:" i] {
         color: blue;
       }
-      div a[href^="tel"] {
+      a[href^="tel:" i] {
         color: yellow;
       }
-      div a[href^="aaa"] {
+      a[href$=".pdf" i] {
         font-size: 30px;
       }
     </style>
   </head>
   <body>
-    <p style="color: red">红色</p>
+    <p>红色</p>
 
-    <p class="a" tabindex="-1">
+    <p class="a" tabindex="1">
       鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色
     </p>
 
     <p class="a c">
-      <span style="color: red">
+      <span>
         红色
-        <span style="color: green">绿色</span>
-        <span style="color: blue">蓝色</span>
+        <span>绿色</span>
+        <span>蓝色</span>
       </span>
     </p>
 
@@ -69,14 +81,14 @@
     </div>
 
     <style>
-      .a ul li:nth-child(4),
-      .a ul li:nth-child(5),
-      .a ul li:nth-child(6),
-      .a ul li:nth-child(7) {
+      .c ul li:nth-child(4),
+      .c ul li:nth-child(5),
+      .c ul li:nth-child(6),
+      .c ul li:nth-child(7) {
         color: red;
       }
     </style>
-    <div class="a">
+    <div class="c">
       <p>让下面的4567元素为红色</p>
       <ul>
         <li>01</li>
@@ -216,7 +228,13 @@
     <hr />
 
     <style>
-      .prime li:not(:nth-child(1))
+      .prime ul li:nth-child(1),
+      .prime ul li:nth-child(2n + 4),
+      .prime ul li:nth-child(3n + 9),
+      .prime ul li:nth-child(5n + 25),
+      .prime ul li:nth-child(7n + 49) {
+        color: red;
+      }
     </style>
     <div class="prime">
       <p>
