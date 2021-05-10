@@ -16,15 +16,50 @@
         background-color: black;
       }
       .p1 {
-        margin: auto;
         width: 600px;
+        margin: auto;
       }
       .p2 {
-        margin: 16px auto;
         width: 600px;
+        margin: auto;
+        margin-top: 15px;
+      }
+      #d1 {
+        width: 600px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+      div:not([id="d1"]) {
+        border: solid 3px;
+        width: 174px;
+        height: 34px;
+        margin-top: 15px;
+        background-color: pink;
+        text-align: center;
+        line-height: 34px;
+      }
+      div:not([id="d1"]):hover {
+        background-color: red;
+      }
+      div:nth-child(3n + 2) {
+        margin-left: 210px;
+        margin-top: -40px;
+      }
+      div:nth-child(3n + 3) {
+        margin-left: 420px;
+        margin-top: -40px;
+      }
+      .p3 {
+        border: 1px transparent dotted;
+        border-bottom-color: black;
+        width: 598px;
+        margin: 0 auto;
+      }
+      .p4 {
+        border-bottom-color: transparent;
       }
       .p5 {
-        background-color: rgb(238, 138, 238);
+        background-color: green;
         text-align: center;
       }
     </style>
