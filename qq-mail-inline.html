@@ -8,9 +8,11 @@
     <style>
       body {
         margin: 0;
+        font-size: 0;
       }
       div span {
         display: inline-block;
+        box-sizing: border-box;
       }
       .a {
         background-color: red;
@@ -23,17 +25,16 @@
       .b {
         background-color: lime;
         width: 180px;
-        height: 570px;
+        height: calc(100vh - 65px);
         border-right: solid black 2px;
       }
       .c {
         background-color: cyan;
-        margin-left: 182px;
-        margin-top: -574px;
-        height: 570px;
+        margin-left: 180px;
+        margin-top: calc(-100vh + 65px);
+        height: calc(100vh - 65px);
         font-size: 30px;
         overflow: auto;
-        vertical-align: top;
       }
     </style>
   </head>
