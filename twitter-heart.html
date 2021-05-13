@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: solid lime 1px;
+        border-radius: 50%;
+        background-image: url(web_heart_animation.png);
+        margin: 100px 100px;
+      }
+      div:hover {
+        background-position: -2800px 0;
+        transition: 1s steps(28);
+      }
+      section {
+        width: 100px;
+        height: 100px;
+        border: dotted cyan 1px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: fixed;
+        top: 100px;
+        left: 300px;
+      }
+      .a:hover {
+        margin-left: -2800px;
+        transition: 1s steps(28);
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <section><img class="a" src="web_heart_animation.png" alt="" /></section>
+  </body>
+</html>
