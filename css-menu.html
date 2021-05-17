@@ -5,6 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: black;
+        color: white;
+      }
+      li {
+        padding: 0 20px;
+        position: relative;
+        white-space: nowrap;
+        transition: 0.2s;
+      }
+      .a > li {
+        display: inline-block;
+      }
+      .a ul {
+        display: none;
+        position: absolute;
+      }
+      .a li:hover > ul {
+        display: block;
+      }
+      .a ul ul {
+        left: 100%;
+        top: 0;
+      }
+      li:hover {
+        background-color: lime;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <ul class="a">
+      <li>
+        文件
+        <ul>
+          <li>新建</li>
+          <li>保存</li>
+          <li>
+            还原
+            <ul>
+              <li>查看</li>
+              <li>转到</li>
+              <li>
+                全选
+                <ul>
+                  <li>查看</li>
+                  <li>转到</li>
+                  <li>全选</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        编辑
+        <ul>
+          <li>
+            查看
+            <ul>
+              <li>查看</li>
+              <li>转到</li>
+              <li>
+                全选
+                <ul>
+                  <li>查看</li>
+                  <li>转到</li>
+                  <li>全选</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>转到</li>
+          <li>全选</li>
+        </ul>
+      </li>
+      <li>
+        选择
+        <ul>
+          <li>查看</li>
+          <li>
+            转到
+            <ul>
+              <li>查看</li>
+              <li>转到</li>
+              <li>全选</li>
+            </ul>
+          </li>
+          <li>全选</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
 </html>
