@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        border: solid 2px red;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+      }
+      .b {
+        box-sizing: border-box;
+        border: solid 2px black;
+        width: 100px;
+        height: 100px;
+        margin: 50px 50px;
+      }
+      .c {
+        border: solid 2px red;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        display: table;
+      }
+      .d {
+        border: solid 2px red;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        position: relative;
+      }
+      .e {
+        box-sizing: border-box;
+        border: solid 2px black;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+      }
+      span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div class="b"></div>
+    </div>
+    <div class="c">
+      <span>Lorem ipsum dolor, elit. Provident qui. </span>
+    </div>
+    <div class="d">
+      <div class="e"></div>
+    </div>
+  </body>
+</html>
