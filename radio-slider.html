@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input#a1 {
+        position: absolute;
+        z-index: 10;
+        top: 240px;
+        left: 540px;
+      }
+      input#a2 {
+        position: absolute;
+        z-index: 10;
+        top: 240px;
+        left: 560px;
+      }
+      input#a3 {
+        position: absolute;
+        z-index: 10;
+        top: 240px;
+        left: 580px;
+      }
+      div {
+        width: 600px;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+      }
+      input:nth-child(1):checked ~ div img:nth-child(1),
+      input:nth-child(2):checked ~ div img:nth-child(2),
+      input:nth-child(3):checked ~ div img:nth-child(3) {
+        left: 0;
+        z-index: 8;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="a" id="a1" />
+    <input type="radio" name="a" id="a2" />
+    <input type="radio" name="a" id="a3" />
+    <div>
+      <img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9d0f9e0184661354b44381b1920f8c01.jpeg?w=2452&h=920"
+      />
+      <img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2b6933610dfa42adc25e4adf19ac5450.jpg?thumb=1&w=1226&h=460"
+      />
+      <img
+        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/175b22f0032803f8bdbd94590c8c6629.jpeg?thumb=1&w=1226&h=460"
+      />
+    </div>
+  </body>
+</html>
