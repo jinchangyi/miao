@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #ccc;
+      }
+      .a {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .b {
+        transform-style: preserve-3d;
+        animation: move 40s linear infinite;
+        position: relative;
+      }
+      @keyframes move {
+        form {
+          transform: rotateY(0) rotatex(0);
+        }
+        to {
+          transform: rotateY(10turn) rotateX(10turn);
+        }
+      }
+      .b div {
+        font-size: 50px;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+        box-sizing: border-box;
+        width: 100px;
+        height: 100px;
+        border: silver solid 2px;
+        border-radius: 10px;
+        position: absolute;
+      }
+      .b div:nth-child(1) {
+        transform: translatez(50px);
+        border-color: #e52222bb;
+        background-color: #e52222bb;
+      }
+      .b div:nth-child(2) {
+        transform: translatez(-50px) rotateY(180deg);
+        border-color: #d5e522bb;
+        background-color: #d5e522bb;
+      }
+      .b div:nth-child(3) {
+        transform: translatex(50px) rotateY(90deg);
+        border-color: #26e522bb;
+        background-color: #26e522bb;
+      }
+      .b div:nth-child(4) {
+        transform: translatex(-50px) rotateY(-90deg);
+        background-color: #22e5e5bb;
+        border-color: #22e5e5bb;
+      }
+      .b div:nth-child(5) {
+        transform: translatey(50px) rotatex(-90deg);
+        background-color: #2235e5bb;
+        border-color: #2235e5bb;
+      }
+      .b div:nth-child(6) {
+        transform: translatey(-50px) rotatex(90deg);
+        background-color: #be22e5bb;
+        border-color: #be22e5bb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div class="b">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+    </div>
+  </body>
+</html>
