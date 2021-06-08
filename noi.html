@@ -28,7 +28,7 @@
 <script id="ch0103/06">
   var a = Number(prompt("a"));
   var b = Number(prompt("b"));
-  console.log((b / a).toFixed(3) + "\%");
+  console.log(((b / a) * 100).toFixed(3) + "\%");
 </script>
 <script id="ch0103/07">
   var a = Number(prompt("a"));
@@ -36,8 +36,7 @@
   var c = Number(prompt("c"));
   var d = Number(prompt("d"));
   var x = Number(prompt("x"));
-  var f = (x) => a * x * x * x + b * x * x + c * x + d;
-  console.log(f(x).toFixed(7));
+  console.log((a * x * x * x + b * x * x + c * x + d).toFixed(7));
 </script>
 <script id="ch0103/08">
   var f = Number(prompt("f >= -459.67"));
@@ -71,17 +70,16 @@
 </script>
 <script id="ch0103/13">
   var a = Number(prompt("a"));
-  console.log(
-    parseInt((a % 10) / 1),
-    parseInt((a % 100) / 10),
-    parseInt(a / 100)
-  );
+  var x = parseInt(a / 100);
+  var y = parseInt((a % 100) / 10);
+  var z = parseInt((a % 10) / 1);
+  console.log(string(z) + string(y) + string(x));
 </script>
 <script id="ch0103/14">
   var h = Number(prompt("h"));
   var r = Number(prompt("r"));
   var pi = 3.14159;
-  console.log((20 / (pi * r * r * h)) * 1000);
+  console.log(Math.ceil((20 / (pi * r * r * h)) * 1000));
 </script>
 <script id="ch0103/15">
   var n = Number(prompt("n"));
@@ -105,19 +103,11 @@
   var y2 = Number(prompt("y2"));
   var x3 = Number(prompt("x3"));
   var y3 = Number(prompt("y3"));
-  var p =
-    (Math.sqrt((x2 - x1) * (x2 - x1) + (y3 - y1) * (y3 - y1)) +
-      (x2 - x1) +
-      (y3 - y1)) /
-    2;
-  console.log(
-    Math.sqrt(
-      p *
-        (p - (x2 - x1)) *
-        (p - (y3 - y1)) *
-        (p - Math.sqrt((x2 - x1) * (x2 - x1) + (y3 - y1) * (y3 - y1)))
-    )
-  );
+  var a = x2 - x1;
+  var b = y3 - y1;
+  var c = Math.sqrt((x2 - x1) * (x2 - x1) + (y3 - y1) * (y3 - y1));
+  var p = (c + a + b) / 2;
+  console.log(Math.sqrt(p * (p - a) * (p - b) * (p - c)).toFixed(2));
 </script>
 <script id="ch0103/18">
   var a1 = Number(prompt("a1"));
