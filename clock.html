@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3308196472,2048624837&fm=26&gp=0.jpghttps://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3308196472,2048624837&fm=26&gp=0.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        border: silver solid 10px;
+        position: relative;
+        margin: auto;
+      }
+      div * {
+        position: absolute;
+      }
+      div [class^="n"] {
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        font-size: 40px;
+      }
+      .n1 {
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-220px)
+          rotate(-30deg);
+      }
+      .n2 {
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-220px)
+          rotate(-60deg);
+      }
+      .n3 {
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-220px)
+          rotate(-90deg);
+      }
+      .n4 {
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-220px)
+          rotate(-120deg);
+      }
+      .n5 {
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-220px)
+          rotate(-150deg);
+      }
+      .n6 {
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-220px)
+          rotate(-180deg);
+      }
+      .n7 {
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-220px)
+          rotate(-210deg);
+      }
+      .n8 {
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-220px)
+          rotate(-240deg);
+      }
+      .n9 {
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-220px)
+          rotate(-270deg);
+      }
+      .n10 {
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-220px)
+          rotate(-300deg);
+      }
+      .n11 {
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-220px)
+          rotate(-330deg);
+      }
+      .n12 {
+        transform: translate(-50%, -50%) rotate(360deg) translateY(-220px)
+          rotate(-360deg);
+      }
+      div [class^="dir"] {
+        height: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .dir-h {
+        animation: time 43200s steps(60, end) infinite;
+      }
+      .hour {
+        height: 150px;
+        width: 10px;
+        background-color: #333333;
+        border-radius: 50% 50% 0 0/20% 20% 0 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform-origin: center bottom;
+        animation: hour 720s ease-out infinite;
+      }
+      .dir-m {
+        animation: time 3600s steps(60, end) infinite;
+      }
+      .min {
+        height: 180px;
+        width: 6px;
+        background-color: #333333;
+        border-radius: 50% 50% 0 0/20% 20% 0 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform-origin: center bottom;
+        animation: min 60s ease-out infinite;
+      }
+      .dir-s {
+        animation: time 60s steps(60, end) infinite;
+      }
+      .sec {
+        height: 250px;
+        width: 4px;
+        background-color: lightcoral;
+        border-radius: 50% 50% 0 0/20% 20% 0 0;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform-origin: center calc(100% - 30px);
+        animation: sec 1s ease-out infinite;
+      }
+      @keyframes time {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes hour {
+        0% {
+          transform: rotate(0);
+        }
+        0.03125% {
+          transform: rotate(3deg);
+        }
+        0.0625% {
+          transform: rotate(0);
+        }
+        0.09375% {
+          transform: rotate(-1.5deg);
+        }
+        0.125% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+      @keyframes min {
+        0% {
+          transform: rotate(0);
+        }
+        0.125% {
+          transform: rotate(3deg);
+        }
+        0.25% {
+          transform: rotate(0);
+        }
+        0.375% {
+          transform: rotate(-1.5deg);
+        }
+        0.5% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+      @keyframes sec {
+        0% {
+          transform: rotate(0);
+        }
+        5% {
+          transform: rotate(2deg);
+        }
+        10% {
+          transform: rotate(0);
+        }
+        15% {
+          transform: rotate(-1deg);
+        }
+        20% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div class="n1">1</div>
+      <div class="n2">2</div>
+      <div class="n3">3</div>
+      <div class="n4">4</div>
+      <div class="n5">5</div>
+      <div class="n6">6</div>
+      <div class="n7">7</div>
+      <div class="n8">8</div>
+      <div class="n9">9</div>
+      <div class="n10">10</div>
+      <div class="n11">11</div>
+      <div class="n12">12</div>
+      <div class="dir-h">
+        <div class="hour"></div>
+      </div>
+      <div class="dir-m">
+        <div class="min"></div>
+      </div>
+      <div class="dir-s">
+        <div class="sec"></div>
+      </div>
+    </div>
+  </body>
+</html>
