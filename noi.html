@@ -255,13 +255,22 @@
   var a = +prompt("a");
   var b = +prompt("b");
   var c = +prompt("c");
-  var x1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
-  var x2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
-  var i = Math.sqrt(4 * a * c - b * b) / (2 * a);
-  if (b * b == 4 * a * c) console.log(x1, x2);
-  if (b * b > 4 * a * c) console.log(x1, x2);
+  var y = (Math.sqrt(4 * a * c - b * b) / (2 * a)).toFixed(5);
+  if (b * b == 4 * a * c)
+    console.log(
+      (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a),
+      (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+    );
+  if (b * b > 4 * a * c)
+    console.log(
+      (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a),
+      (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)
+    );
   if (b * b < 4 * a * c)
-    console.log(x1 == -b / (2 * a) + "+" + i, x2 == -b / (2 * a) + "-" + i);
+    console.log(
+      (-b / (2 * a)).toFixed(5) + "+" + y + "i",
+      (-b / (2 * a)).toFixed(5) + "-" + y + "i"
+    );
 </script>
 <script id="ch0104/21">
   var n = +prompt("n");
