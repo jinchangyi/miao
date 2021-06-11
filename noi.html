@@ -287,4 +287,219 @@
   var y = +prompt("y");
   console.log(parseInt(n - y / x));
 </script>
-<script id="ch0104/01"></script>
+<script id="ch0105/01">
+  var n = +prompt("请出入人数");
+  var age = 0;
+  var s = 0;
+  do {
+    var age = age + +prompt("请出入年龄");
+    s = s + 1;
+  } while (s < n);
+  console.log((age / n).toFixed(2));
+</script>
+<script id="ch0105/02">
+  var s = 0;
+  var a = 0;
+  while (s < 12) {
+    s = s + 1;
+    var m = +prompt("请出入金额");
+    a = a + m;
+  }
+  console.log("$" + (a / 12).toFixed(2));
+</script>
+<script id="ch0105/03">
+  var n = +prompt("请输入行数");
+  var s = 0;
+  var a = 0;
+  while (s < 2) {
+    s = s + 1;
+    var a = a + +prompt("请出入数据");
+  }
+  console.log((a / n).toFixed(4));
+</script>
+<script id="ch0105/04">
+  var n = +prompt("请输入行数");
+  var s = 0;
+  var a = 0;
+  while (s < 4) {
+    s = s + 1;
+    var a = a + +prompt("请出入数据");
+  }
+  console.log(a + " " + (a / n).toFixed(5));
+</script>
+<script id="ch0105/05">
+  var n = +prompt("请输入考试人数");
+  var s = 0;
+  var y = 0;
+  while (s < 5) {
+    s = s + 1;
+    var a = +prompt("请出入分数");
+    y = Math.max(a, y);
+  }
+  console.log(y);
+</script>
+<script id="ch0105/06">
+  var n = +prompt("请输入行数");
+  var s = 0;
+  var x = 0;
+  var y = 0;
+  while (s < 6) {
+    s = s + 1;
+    var a = +prompt("请出入分数");
+    y = Math.max(a, y);
+    x = Math.min(a, x);
+  }
+  console.log(y - x);
+</script>
+<script id="ch0105/07">
+  var n = +prompt("请输入天数");
+  var s = 0;
+  var a = 0;
+  var b = 0;
+  var c = 0;
+  while (s < n) {
+    s = s + 1;
+    var j = +prompt("请出入金牌数");
+    var y = +prompt("请出入银牌数");
+    var t = +prompt("请出入铜牌数");
+    a = a + j;
+    b = b + y;
+    c = c + t;
+  }
+  console.log(a, b, c, a + b + c);
+</script>
+<script id="ch0105/08">
+  var n = +prompt("请输入几边形");
+  var r = 0;
+  var a = 0;
+  for (counter = 1; counter < n; counter = counter + 1) {
+    a = a + +prompt("请输入内角的度数");
+    r = (n - 2) * 180 - a;
+  }
+  console.log(r);
+</script>
+<script id="ch0105/09">
+  var m = +prompt("请输入m");
+  var n = +prompt("请输入n");
+  var r = 0;
+  for (counter = 0; counter <= Math.ceil((n - m) / 2); counter = counter + 1) {
+    if (m % 2 == 0) {
+      var x = m + 1;
+      r = r + x + 2;
+    }
+    if (m % 2 == 1) {
+      var x = m + 2;
+      r = r + x + 2;
+    }
+  }
+  console.log(r);
+</script>
+<script id="ch0105/10">
+  var m = +prompt("请输入m");
+  var n = +prompt("请输入n");
+  var r = 0;
+  for (var i = m; i <= n; i++) {
+    if (i % 17 == 0) r = r + i;
+  }
+  console.log(r);
+</script>
+<script id="ch0105/11">
+  var k = +prompt("请输入k");
+  var r = 0;
+  var s = 0;
+  var d = 0;
+  for (i = 0; i < k; i++) {
+    var x = +prompt("请输入数字");
+    if (x == 1) {
+      r = r + 1;
+    } else if (x == 5) {
+      s = s + 1;
+    } else if (x == 10) {
+      d = d + 1;
+    }
+  }
+  console.log(r);
+  console.log(s);
+  console.log(d);
+</script>
+<script id="ch0105/12">
+  var n = +prompt("请输入n");
+  var m = +prompt("请输入m");
+  var x = 0;
+  for (i = 0; i < n; i++) {
+    var x = +prompt("请输入");
+  }
+  console.log((x = m));
+</script>
+<script id="ch0105/13">
+  var a = +prompt("请输入a");
+  var n = +prompt("请输入n");
+  console.log(Math.pow(a, n));
+</script>
+<script id="ch0105/14">
+  var x = +prompt("请输入x");
+  var n = +prompt("请输入n");
+  for (i = 0; i < n; i++) {
+    x = x + x * 0.001;
+  }
+  console.log(x.toFixed(4));
+</script>
+<script id="ch0105/15">
+  var r = +prompt("请输入r");
+  var m = +prompt("请输入m");
+  var y = +prompt("请输入y");
+  for (i = 0; i < y; i++) {
+    m = m + (m * r) / 100;
+  }
+  console.log(Math.floor(m));
+</script>
+<script id="ch0105/16">
+  var n = +prompt("请输入n");
+  var k = +prompt("请输入k");
+  var m = 0;
+  var x = 200;
+  var y = 0;
+  for (i = 0; i < m; i++) {
+    if (y >= x) console.log(m);
+    if (m <= 20) {
+      x = x + (x * k) / 100;
+      y = n * m;
+    } else if (m > 20) {
+      console.log("impossible");
+    }
+  }
+</script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
+<script id="ch0105/01"></script>
