@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: black;
+    }
+    div {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: red;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div style="top: 100px; left: 100px;">
+
+  </div>
+  <script>
+    var div = document.querySelector('div')
+    var vx = 0
+    var vy = 0
+    var leftPress = false
+    var rightPress = false
+    var upPress = false
+    var downPress = false
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key == 'ArrowRight') {
+        vx = 1
+        leftPress = true
+
+      }
+      if (e.key == 'ArrowLeft') {
+        vx = -1
+        rightPress = true
+      }
+      if (e.key == 'ArrowUp') {
+        vy = -1
+        upPress = true
+
+      }
+      if (e.key == 'ArrowDown') {
+        vy = 1
+        downPress = true
+      }
+    })
+    document.addEventListener('keyup', function(e) {
+      if (e.key == 'ArrowRight') {
+        rightPress = false
+        if (leftPress) {
+          vx = 1
+        } else {
+          vx = 0
+        }
+      }
+      if (e.key == 'ArrowLeft') {
+        leftPress = false
+        if (rightPress) {
+          vx = -1
+        } else {
+          vx = 0
+        }
+      }
+      if (e.key == 'ArrowUp') {
+        upPress = false
+        if (downPress) {
+          vy = 1
+        } else {
+          vy = 0
+        }
+      }
+      if (e.key == 'ArrowDown') {
+        downPress = false
+        if (upPress) {
+          vy = -1
+        } else {
+          vy = 0
+        }
+      }
+    })
+    var lastTime = 0
+
+    requestAnimationFrame(function move(time) {
+      var timeDiff = time - lastTime
+      lastTime = time
+      div.style.left = parseFloat(div.style.left) + vx * timeDiff * 0.05 + 'px'
+      div.style.top = parseFloat(div.style.top) + vy * timeDiff * 0.05 + 'px'
+
+      requestAnimationFrame(move)
+    })
+  </script>
+</body>
+</html>
