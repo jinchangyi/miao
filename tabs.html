@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div>
+    <div data-tabname="Home">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod aliquam odio laboriosam. Delectus voluptate, id animi minus ad dignissimos aperiam, nesciunt saepe cupiditate et accusamus vitae, fugit iusto eveniet labore?</div>
+    <div data-tabname="Link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dignissimos, perferendis corrupti numquam blanditiis eos obcaecati laudantium labore doloremque voluptas, quisquam ad expedita mollitia nesciunt possimus quod? Qui, aut sequi?</div>
+    <div data-tabname="About">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vel placeat iste sequi amet rerum dolore nam possimus, aliquid voluptatem, debitis numquam dicta recusandae officiis, voluptatibus at cupiditate quis earum.</div>
+  </div>
+  <script>
+    function asTabs(node) {
+      let children = Array.from(node.children)
+      for (let child of children) {
+        let button = document.createElement('button')
+
+        button.textContent = child.dataset.tabname
+        child.style.display = 'none'
+
+        button.addEventListener('click', e => {
+          children.forEach(it => it.style.display = 'none')
+          child.style.display = 'block'
+          buttons.forEach(it => it.style.background = '')
+          button.style.background = 'blue'
+        })
+
+        node.prepend(button)
+      }
+
+    }
+    asTabs(document.querySelector('body > div'))
+  </script>
+</body>
+</html>
