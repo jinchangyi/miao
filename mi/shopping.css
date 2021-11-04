@@ -1,0 +1,461 @@
+/* 卡片块模板统一样式 */
+
+div[class*="-card-container"] {
+  width: 1226px;
+  height: 686px;
+  margin: 0 auto 8px;
+}
+
+.card-container-top {
+  width: 1226px;
+  height: 57.6px;
+  margin: auto;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 58px;
+  color: #333;
+}
+
+.card-container-bottom {
+  width: 1226px;
+  height: 628px;
+  position: relative;
+}
+
+div.container-bottom-left {
+  position: relative;
+  width: 234px;
+  height: 614px;
+  transition: all .2s linear;
+}
+
+/* 手机卡片块左侧长块 */
+
+.phone-card-container div.container-bottom-left:hover {
+  transition: all .2s linear;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+
+/* 手机卡片块左侧长图 */
+
+.phone-card-container div.container-bottom-left>a>img {
+  width: 234px;
+  height: 614px;
+}
+
+/* 手机卡片块右上角查看更多 */
+
+a.more {
+  position: absolute;
+  right: 0;
+  top: -58px;
+  height: 57.6px;
+  line-height: 57.6px;
+  font-size: 16px;
+  color: #424242;
+  transition: all .4s;
+}
+
+/* 手机卡片块右上角图标 > */
+
+a.more>i.icon {
+  height: 12px;
+  padding: 4px;
+  margin-left: 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  line-height: 12px;
+  background: #b0b0b0;
+  color: #fff;
+  transition: all .4s;
+}
+
+/* 手机卡片块右上角查看更多:hover 样式 */
+
+a.more:hover {
+  color: #ff6709;
+  transition: all .4s;
+}
+
+a.more:hover>i {
+  background-color: #ff6709;
+  transition: all .4s;
+}
+
+/* 手机板块购物卡片样式 */
+
+.phone-card-container ul.container-bottom-right>li {
+  position: relative;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  width: 234px;
+  height: 260px;
+  padding: 20px 0;
+  background-color: #fff;
+  transition: all .2s linear;
+}
+
+.phone-card-container ul.container-bottom-right {
+  left: 234px;
+  top: 0;
+}
+
+/* 购物卡片包含块右侧统一样式 */
+
+ul.container-bottom-right {
+  display: flex;
+  width: 992px;
+  flex-flow: row wrap;
+  position: absolute;
+  right: 0;
+  top: 42px;
+  visibility: visible;
+  transition: visibility 0s 999s;
+}
+
+/* 正常大小购物卡片统一样式 */
+
+ul.container-bottom-right>li:not(:last-child) {
+  position: relative;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  width: 234px;
+  height: 260px;
+  padding: 20px 0;
+  background-color: #fff;
+  transition: all .2s linear;
+}
+
+/* 正常大小购物卡片:hover样式 */
+
+ul.container-bottom-right>li:not(:last-child):hover {
+  transition: all .2s linear;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+
+/* 手机板块购物卡片:hover样式 */
+
+div.phone-card-container ul.container-bottom-right>li:last-child:hover {
+  transition: all .2s linear;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+
+ul.container-bottom-right>li>a>img {
+  width: 160px;
+  height: 160px;
+  padding: 0 37px 18px;
+}
+
+ul.container-bottom-right>li>a>h3 {
+  width: 214px;
+  margin: 0 10px 2px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+p.card-desc {
+  height: 18px;
+  margin: 0 10px 10px;
+  font-size: 12px;
+  text-align: center;
+  text-overflow: ellipsis;
+  color: #b0b0b0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+p.card-price {
+  text-align: center;
+}
+
+p.card-price>span.now {
+  color: #ff6709;
+}
+
+p.card-price>span.past {
+  color: #b0b0b0;
+  text-decoration: #b0b0b0 solid line-through;
+}
+
+/* 小商品卡样式*/
+
+div.small-card {
+  width: 234px;
+  height: 93px;
+  padding-top: 50px;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  transition: all .2s linear;
+}
+
+div.small-card:hover {
+  transition: all .2s linear;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+}
+
+div.small-card img {
+  float: right;
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  margin-top: -20px;
+}
+
+div.small-card h3 {
+  margin: -10px 110px 5px 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+}
+
+div.small-card p {
+  margin: 0 110px 0 30px;
+  font-size: 14px;
+  color: #ff6700;
+}
+
+/* 浏览更多样式 */
+
+div.browse-more {
+  width: 234px;
+  height: 93px;
+  padding-top: 50px;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  transition: all .2s linear;
+}
+
+div.browse-more:hover {
+  transition: all .2s linear;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+}
+
+div.more-left {
+  margin: 0 110px 0 30px;
+  font-size: 18px;
+  color: #333;
+}
+
+div.more-left>p.small {
+  font-size: 12px;
+  color: #757575;
+}
+
+div.more-right {
+  float: right;
+  font-size: 48px;
+  color: #ff6700;
+  margin-right: 35px;
+  margin-top: -45px;
+}
+
+/* 通用的左侧两张图片样式 */
+
+.container-bottom-left>div>a>img {
+  width: 234px;
+  height: 300px;
+}
+
+.container-bottom-left>div {
+  width: 234px;
+  height: 300px;
+  margin-bottom: 14px;
+  transition: all .2s linear;
+}
+
+.container-bottom-left>div:hover {
+  transition: all .2s linear;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}
+
+#card-container {
+  position: absolute;
+  height: 0;
+  top: -42px;
+  right: 0;
+}
+
+#card-container:hover ul {
+  visibility: hidden;
+  transition: none;
+}
+
+#card-container:hover section {
+  color: #333;
+  border-bottom: 2px solid transparent;
+  transition: none;
+}
+
+#card-container:hover>section.part-1     {
+  color: #333;
+  border-bottom: 2px solid transparent;
+  transition: none;
+}
+
+#card-container>section {
+  float: left;
+  margin-left: 30px;
+  height: 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#card-container>section.part-1 {
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+  transition: color 0s 5s,     border 0s 999s;
+}
+
+section.part-2 {
+  color: #333;
+  border-bottom: 2px solid transparent;
+  transition: color 0s 999s, border 0s 999s;
+}
+
+section.part-3 {
+  color: #333;
+  border-bottom: 2px solid transparent;
+  transition: color 0s 999s, border 0s 999s;
+}
+
+#card-container>section.part-1:hover {
+  color: #ff6700;
+  border-bottom-color: #ff6700;
+  transition: none;
+}
+
+#card-container>section.part-2:hover {
+  color: #ff6700;
+  border-bottom-color: #ff6700;
+  transition: none;
+}
+
+#card-container>section.part-3:hover {
+  color: #ff6700;
+  border-bottom-color: #ff6700;
+  transition: none;
+}
+
+#card-container>section.part-1:hover>ul {
+  visibility: visible;
+  transition: none;
+}
+
+#card-container>section.part-2:hover>ul {
+  visibility: visible;
+  transition: none;
+}
+
+#card-container>section.part-3:hover>ul {
+  visibility: visible;
+  transition: none;
+}
+
+ul.card-p1 {
+  z-index: 999;
+}
+
+/* 底部视频栏 */
+
+div.video-container {
+  width: 1226px;
+  height: 357px;
+  margin: 0 auto 8px;
+}
+
+.video-top {
+  width: 1226px;
+  height: 57.6px;
+  margin: auto;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 58px;
+  color: #333;
+}
+
+ul.video-bottom {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+ul.video-bottom>li {
+  width: 296px;
+  height: 285px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  position: relative;
+  transition: all .2s linear;
+}
+
+ul.video-bottom img {
+  width: 296px;
+  height: 180px;
+  margin-bottom: 28px;
+}
+
+ul.video-bottom h3 {
+  width: 268px;
+  margin: 0 14px 6px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+ul.video-bottom p {
+  width: 268px;
+  margin: auto;
+  font-size: 12px;
+  color: #b0b0b0;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+ul.video-bottom>li i {
+  display: block;
+  position: absolute;
+  left: 20px;
+  bottom: 117px;
+  width: 32px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+  transition: all .2s;
+  overflow: hidden;
+}
+
+ul.video-bottom img:hover+i {
+  background-color: #ff6709;
+  border-color: #ff6709;
+}
+
+ul.video-bottom>li:hover {
+  transition: all .2s linear;
+  transform: translate3d(0, -2px, 0);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+}

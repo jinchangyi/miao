@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      position: fixed;
+    }
+    #first {
+      background-color: red;
+    }
+    #second {
+      background-color: blue;
+      left: 50px;
+      top: 50px;
+    }
+    #third {
+      background-color: yellow;
+      left: 100px;
+      top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div id="first" class="droppable"></div>
+    <div id="second" class="droppable"></div>
+    <div id="third" class="droppable"></div>
+  </section>
+  <script>
+    document.addEventListener('mousedown', function(event) {
+      let target = event.target
+      let max = 2
+
+      target.style.zIndex = max++
+
+      target.ondragstart = function() {
+        return false;
+      };
+
+      let shiftX = event.clientX - target.getBoundingClientRect().left;
+      let shiftY = event.clientY - target.getBoundingClientRect().top;
+
+      moveAt(event.pageX, event.pageY)
+
+      function moveAt(pageX, pageY) {
+        target.style.left = pageX - shiftX + 'px'
+        target.style.top = pageY - shiftY + 'px'
+      }
+
+      function onMouseMove(event) {
+        moveAt(event.pageX, event.pageY)
+      }
+
+      document.addEventListener('mousemove', onMouseMove)
+
+      document.addEventListener('mouseup',function() {
+        document.removeEventListener('mousemove', onMouseMove)
+      })
+
+      
+    })
+
+  </script>
+</body>
+</html>

@@ -34,17 +34,16 @@
     document.addEventListener('keydown', function(e) {
       if (e.key == 'ArrowRight') {
         vx = 1
-        leftPress = true
+        rightPress = true
 
       }
       if (e.key == 'ArrowLeft') {
         vx = -1
-        rightPress = true
+        leftPress = true
       }
       if (e.key == 'ArrowUp') {
         vy = -1
         upPress = true
-
       }
       if (e.key == 'ArrowDown') {
         vy = 1
@@ -90,8 +89,8 @@
     requestAnimationFrame(function move(time) {
       var timeDiff = time - lastTime
       lastTime = time
-      div.style.left = parseFloat(div.style.left) + vx * timeDiff * 0.05 + 'px'
-      div.style.top = parseFloat(div.style.top) + vy * timeDiff * 0.05 + 'px'
+      div.style.left = parseFloat(div.style.left) + vx * timeDiff * 0.125 + 'px'
+      div.style.top = parseFloat(div.style.top) + vy * timeDiff * 0.125 + 'px'
 
       requestAnimationFrame(move)
     })

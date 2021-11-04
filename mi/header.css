@@ -1,0 +1,341 @@
+
+/* 设置头部导航条样式 */
+header {
+  width: 100%;
+}
+
+div.nav-top {
+  width: 100%;
+  height: 40px;
+  background-color: rgb(51,51,51);
+}
+
+div.top-container {
+  width: 1226px;
+  height: 40px;
+  font-size: 12px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.top-container  a {
+  display: inline-block;
+  line-height: 40px;
+  color: #b0b0b0;
+}
+
+div.top-container span {
+  display: inline-block;
+  color: #424242;
+  font-family: sans-serif;
+  margin: 0 .3em;
+}
+
+div.nav-top-left > a.cart {
+  width: 120px;
+  background-color: rgb(66,66,66);
+  position: relative;
+  text-align: center;
+  z-index: 999;
+}
+
+div.nav-top-left > a.cart::before {
+  font-size: 20px;
+  vertical-align: bottom;
+}
+
+div.nav-top-left > a:nth-of-type(1),div.nav-top-left > a:nth-of-type(2) {
+  padding: 0 5px;
+}
+
+div.nav-top-left > a:nth-of-type(3) {
+  padding: 0 10px;
+  margin-right: 16px;
+}
+
+div.nav-top-left > span {
+  margin: 0;
+}
+
+header a:hover {
+  color: rgb(255,255,255);
+}
+
+#download-app {
+  position: relative;
+  z-index: 999;
+}
+
+#download-app div.triangle {
+    display: none;
+    width: 0;
+    height: 0;
+    border: rgb(51,51,51) 7.5px solid;
+    border-bottom: rgb(255,255,255) 7.5px solid;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+}
+
+#download-app div.appcode {
+  width: 124px;
+  height: 0px;
+  font-size: 14px;
+  color: rgb(51,51,51);
+  position: absolute;
+  left: -38px;
+  top: 40px;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 2px 4px rgb(231,231,231);
+  text-align: center;
+  transition: height 0.4s;
+  overflow: hidden;
+}
+
+#download-app div.appcode > img {
+  width: 90px;
+  height: 90px;
+  margin: 17px 17px 0;
+  vertical-align: top;
+}
+
+#download-app:hover > div.triangle{
+  display: block;
+}
+
+#download-app:hover > div.appcode{
+  height: 148px;
+  transition: height 0.4s;
+}
+
+div.cart {
+  width: 315px;
+  height: 0;
+  line-height: 100px;
+  font-size: 12px;
+  color: rgb(66,66,66);
+  box-shadow: 0 2px 3px rgb(231,231,231);
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  overflow: hidden;
+  transition: height 0.35s;
+}
+
+div.nav-top-left > a.cart:hover {
+  color: rgb(255,103,0);
+  background-color: rgb(255,255,255);
+}
+
+div.nav-top-left > a.cart:hover > div.cart {
+  height: 100px;
+  transition: height 0.35s;
+}
+
+
+/* 导航栏下部 */
+
+div.nav-bottom-container {
+  position: relative;
+  z-index: 666;
+  width: 100%;
+}
+
+div.nav-bottom {
+  width: 1226px;
+  font-size: 16px;
+  color: #333;
+  margin: auto;
+}
+
+.nav-bottom > .logo,
+.nav-bottom > [class^="main-nav-"],
+[class^="main-nav-"] > li
+{
+  float: left;
+}
+
+div.logo {
+  margin: 22px 178px 22px 0;
+}
+
+a.mi-logo{
+  background-image: url(image/logo-mi2.png);
+  background-size: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 56px;
+  height: 56px;
+  transition: background-size 0.3s;
+}
+
+a.mi-logo:hover {
+  background-position: 0.5px;
+}
+
+a.mi-logo:active {
+  background-size: 53px;
+  transition: background-size 0.2s;
+}
+
+
+
+ul.menu {
+  width: 1226px;
+  height: 0;
+  padding: 0 calc(50% - 613px);
+  background-color: rgb(255,255,255);
+  box-shadow: 0px 5px 10px -11px #aaa;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  display: flex;
+  justify-content: left;
+  gap: 24px;
+  z-index: 100;
+  overflow: hidden;
+  transition: height 0.5s, z-index 4s;
+}
+
+div.gray-border {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255,255,255);
+  top: 99px;
+  left: 0;
+  transition: background-color 0.9s;
+}
+
+.main-nav-left:hover~div.gray-border {
+
+  background-color: rgb(224,224,224);
+}
+
+[class^="main-nav-"] > li > a{
+  display: block;
+  padding: 38px 10px;
+  color: #333;
+}
+
+.menu > li:nth-child(2n) {
+  width: 1px;
+  height: 100px;
+  margin-top: 35px;
+  background-color: rgb(224,224,224);
+}
+
+.menu > li > a {
+  display: block;
+}
+
+.menu > li > a > img {
+width: 155px;
+margin-top: 35px;
+margin-bottom: 10px;
+
+}
+
+.menu p {
+font-size: 12px;
+color: rgb(51,51,51);
+text-align: center;
+padding: 1px;
+}
+
+p.price {
+  color: rgb(255,103,0);
+}
+
+[class^="main-nav-"] > li > a:hover {
+  color: rgb(255,103,0);
+}
+
+
+.main-nav-left:hover .menu
+{
+  height: 230px;
+  transition: height 0.5s;
+}
+
+
+.main-nav-left > li:hover > ul.menu {
+  z-index: 600;
+}
+
+.menu > li:first-child {
+  margin-left: 25px;
+}
+
+
+
+.search {
+  float: right;
+  margin: 25px 0 25px;
+  position: relative;
+  z-index: 666;
+}
+
+.search .search-ul {
+  position: absolute;
+  width: 243px;
+  height: 0;
+  top: 49px;
+  overflow: hidden;
+}
+
+.search-ul > li {
+  font-size: 12px;
+  color: rgb(66,66,66);
+  background-color: rgb(255,255,255);
+  height: 29px;
+  line-height: 29px;
+  padding-left: 15px;
+}
+
+.search-ul > li:hover {
+  background-color: rgb(250,250,250);
+}
+
+.search input:focus ~.search-ul {
+  height: 174px;
+  border: 1px solid rgb(255,103,0);
+}
+
+.search input {
+  width: 223px;
+  height: 48px;
+  padding: 0 10px;
+  margin-right: -1px;
+  border: 1px solid rgb(224,224,224);
+}
+
+.search button {
+  width: 52px;
+  height: 50px;
+  padding: 1px 6px;
+  font-size: 24px;
+  color: rgb(97,97,97);
+  border: 1px solid rgb(224,224,224);
+  background-color: #fff;
+  vertical-align: bottom;
+}
+
+.search > form:hover > *{
+  border-color: rgb(176,176,176);
+}
+
+.search > form > button:hover {
+  background-color: rgb(255,103,0);
+  color: rgb(255,255,255);
+  border-color: rgb(255,103,0);
+}
+
+.search input:focus,
+.search input:focus+button{
+  border-color: rgb(255,103,0);
+}
